@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Hi, {{ user['nickName'] }}, welcome!</h1>
+    {% for post in posts %}
+    <div><p>{{ post['author']['nickname'] }} posted: <b>{{ post['title'] }}</b> at {{ post['time'] }}</p></div>
+    {% endfor %}
+{% endblock %}
