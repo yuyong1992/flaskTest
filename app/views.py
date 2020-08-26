@@ -2,12 +2,9 @@
 # @Author: YuYong
 # @Date  : 2020/8/25 13:22
 
-from flask import Flask
+from app import app
 from flask import render_template, flash, redirect
-from froms import LoginForm
-
-app = Flask(__name__)
-app.config.from_object('config')
+from .froms import LoginForm
 
 
 @app.route('/')
@@ -43,5 +40,5 @@ def login():
     return render_template('login.html',
                            title='Sign in',
                            form=form,
-                           providers = app.config['OPENID_PROVIDERS']
+                           providers=app.config['OPENID_PROVIDERS']
                            )

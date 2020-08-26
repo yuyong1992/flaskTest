@@ -2,7 +2,11 @@
 # @Author: YuYong
 # @Date  : 2020/8/25 14:14
 
-from views import app
+from app.views import app
+
+
+# app.config.from_object('config.BaseConfig')
+
 
 if __name__ == '__main__':
-    app.run(debug=True, host='127.0.0.1', port=8080)
+    app.run()
